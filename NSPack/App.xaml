@@ -1,0 +1,9 @@
+﻿<Application x:Class="Brew.NSPack.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Brew.NSPack"
+             StartupUri="GUI/ProgramWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

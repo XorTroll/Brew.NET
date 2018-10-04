@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSPack", "NSPack\NSPack.csproj", "{7D4E415D-C34A-421E-8F7C-B113E5503834}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HacPack", "HacPack\HacPack.csproj", "{6B22A7CB-2F37-41EB-BC42-09E8E0BED121}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D4E415D-C34A-421E-8F7C-B113E5503834}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D4E415D-C34A-421E-8F7C-B113E5503834}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D4E415D-C34A-421E-8F7C-B113E5503834}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D4E415D-C34A-421E-8F7C-B113E5503834}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B22A7CB-2F37-41EB-BC42-09E8E0BED121}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B22A7CB-2F37-41EB-BC42-09E8E0BED121}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B22A7CB-2F37-41EB-BC42-09E8E0BED121}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B22A7CB-2F37-41EB-BC42-09E8E0BED121}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {26B552D7-0301-4292-9778-966D141A7383}
+	EndGlobalSection
+EndGlobal
