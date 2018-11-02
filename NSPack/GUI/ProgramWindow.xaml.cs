@@ -13,13 +13,14 @@ namespace Brew.NSPack.GUI
     {
         public int PreSelect = 0;
         public Start start;
-        public AssetEditor editor;
+        public TitlePackager editor;
+        public ContentCreator creator;
 
         public ProgramWindow()
         {
             InitializeComponent();
             HacPack.Utils.initTemporaryDirectory();
-            GUI.Resources.setTitle("Ready to build NSP packages!");
+            GUI.Resources.resetTitle();
         }
 
         private void OptionToggle_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -34,17 +35,20 @@ namespace Brew.NSPack.GUI
                     if(start is null) start = new Start();
                     PageHolder.NavigationService.Navigate(start);
                     break;
-
                 case 1:
-                    if(editor is null) editor = new AssetEditor();
+                    if(editor is null) editor = new TitlePackager();
                     PageHolder.NavigationService.Navigate(editor);
+                    break;
+                case 2:
+                    if(creator is null) creator = new ContentCreator();
+                    PageHolder.NavigationService.Navigate(creator);
                     break;
             }
         }
 
         private void Button_Next_Click(object sender, RoutedEventArgs e)
         {
-            if(PreSelect > 2) return;
+            if(PreSelect > 3) return;
             OptionToggle.SelectedIndex++;
             switch(PreSelect)
             {
@@ -52,10 +56,13 @@ namespace Brew.NSPack.GUI
                     if(start is null) start = new Start();
                     PageHolder.NavigationService.Navigate(start);
                     break;
-
                 case 1:
-                    if(editor is null) editor = new AssetEditor();
+                    if(editor is null) editor = new TitlePackager();
                     PageHolder.NavigationService.Navigate(editor);
+                    break;
+                case 2:
+                    if(creator is null) creator = new ContentCreator();
+                    PageHolder.NavigationService.Navigate(creator);
                     break;
             }
         }
@@ -76,10 +83,13 @@ namespace Brew.NSPack.GUI
                     if(start is null) start = new Start();
                     PageHolder.NavigationService.Navigate(start);
                     break;
-
                 case 1:
-                    if(editor is null) editor = new AssetEditor();
+                    if(editor is null) editor = new TitlePackager();
                     PageHolder.NavigationService.Navigate(editor);
+                    break;
+                case 2:
+                    if(creator is null) creator = new ContentCreator();
+                    PageHolder.NavigationService.Navigate(creator);
                     break;
             }
         }

@@ -1,0 +1,136 @@
+﻿<Page x:Class="Brew.NSPack.GUI.TitlePackager"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Brew.NSPack"
+        xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:material="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        d:DesignHeight="474" d:DesignWidth="1172"
+        Title="ProjectWeb" FontFamily="Segoe UI">
+    <Grid>
+        <Label FontSize="25" HorizontalAlignment="Left" Margin="25,11,0,0" VerticalAlignment="Top" Grid.RowSpan="2">Building a NSP package</Label>
+        <Label FontSize="12" Foreground="Gray" HorizontalAlignment="Left" Margin="309,23,0,0" VerticalAlignment="Top">(leave RomFS, Logo or HTML documents empty if you're not going to use them)</Label>
+        <material:Card Margin="10,68,520,63" VerticalAlignment="Stretch">
+            <Grid>
+                <Label Content="Title assets" FontSize="14" HorizontalAlignment="Left" Margin="288,10,0,0" VerticalAlignment="Top"/>
+                <Label Content="Control NCA, generic assets" Foreground="Gray" FontSize="14" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="Box_Name" Foreground="White" HorizontalAlignment="Left" Height="26" Margin="86,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" RenderTransformOrigin="0.467,0.522"/>
+                <Label Content="Name" HorizontalAlignment="Left" Margin="19,102,0,0" VerticalAlignment="Top" Height="26" Width="42"/>
+                <TextBox x:Name="Box_Author" Foreground="White" HorizontalAlignment="Left" Height="26" Margin="86,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" RenderTransformOrigin="0.467,0.522"/>
+                <Label Content="Author" HorizontalAlignment="Left" Margin="19,128,0,0" VerticalAlignment="Top" Height="26" Width="47"/>
+                <TextBox x:Name="Box_Version" Foreground="White" HorizontalAlignment="Left" MaxLength="15" Height="26" Margin="86,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" RenderTransformOrigin="0.467,0.522"/>
+                <Label Content="Version" HorizontalAlignment="Left" Margin="19,154,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.469,0.231" Height="26" Width="49"/>
+                <TextBox x:Name="Box_TitleID" Foreground="White" HorizontalAlignment="Left" MaxLength="16" Height="26" Margin="86,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" RenderTransformOrigin="0.467,0.522"/>
+                <Label Content="Title ID" HorizontalAlignment="Left" Margin="19,51,0,0" VerticalAlignment="Top" Height="26" Width="47"/>
+                <Image x:Name="Image_Icon" Margin="377,28,15,25"/>
+                <Label Content="Icon" HorizontalAlignment="Left" Margin="210,159,0,0" VerticalAlignment="Top" Height="26" Width="42"/>
+                <Button x:Name="Button_IconBrowse" ToolTip="Browse the icon for the title (will be converted and scaled to a 256x256 JPEG)" Style="{DynamicResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left" Margin="246,159,0,0" VerticalAlignment="Top" Width="26" Height="26" Click="Button_IconBrowse_Click">
+                    <material:PackIcon Kind="Folder"/>
+                </Button>
+                <Label Content="Key generation" HorizontalAlignment="Left" Margin="19,77,0,0" VerticalAlignment="Top" Height="26" Width="90"/>
+                <ComboBox x:Name="Combo_KeyGen" Foreground="White" HorizontalAlignment="Left" SelectedIndex="5" Margin="125,77,0,0" VerticalAlignment="Top" Width="127" Height="26">
+                    <ComboBoxItem Content="1 (1.0.0 - 2.3.0)"/>
+                    <ComboBoxItem Content="2 (3.0.0)"/>
+                    <ComboBoxItem Content="3 (3.0.1 - 3.0.2)"/>
+                    <ComboBoxItem Content="4 (4.0.0 - 4.1.0)"/>
+                    <ComboBoxItem Content="5 (5.0.0 - 5.1.0)"/>
+                    <ComboBoxItem Content="6 (6.0.0 - Latest)"/>
+                </ComboBox>
+                <TextBox x:Name="Box_ProductCode" Foreground="White" HorizontalAlignment="Left" MaxLength="16" Height="26" Margin="143,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144">LA-H-ABCDE</TextBox>
+                <Label Content="Product code / serial" HorizontalAlignment="Left" Margin="19,180,0,0" VerticalAlignment="Top" Height="26" Width="119"/>
+                <TextBox x:Name="Box_KeySet" Foreground="White" HorizontalAlignment="Left" Height="26" Margin="86,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="245" RenderTransformOrigin="0.467,0.522"/>
+                <Label Content="Keyset file" HorizontalAlignment="Left" Margin="19,206,0,0" VerticalAlignment="Top" Height="26" Width="67"/>
+                <Button x:Name="Button_KeySetBrowse" ToolTip="Browse keyset file (same used with hactool, hacpack...)" Style="{DynamicResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left" Margin="336,206,0,0" VerticalAlignment="Top" Width="26" Height="26" Click="Button_KeySetBrowse_Click">
+                    <material:PackIcon Kind="Folder"/>
+                </Button>
+                <CheckBox x:Name="Check_AllowScreenshots" Foreground="White" ToolTip="Will the title allow taking screenshots with the screenshot button?" Margin="19,0,0,85" HorizontalAlignment="Left" Width="136" Height="26" VerticalAlignment="Bottom">Allow screenshots</CheckBox>
+                <CheckBox x:Name="Check_AllowVideo" Foreground="White" ToolTip="Will the title allow recording gameplay with the screenshot button?" Margin="160,0,0,85" HorizontalAlignment="Left" Width="171" Height="26" VerticalAlignment="Bottom">Allow video capture</CheckBox>
+                <CheckBox x:Name="Check_UserAccount" Foreground="White" ToolTip="Will the title ask for a user account when launching it?" Margin="19,0,0,59" HorizontalAlignment="Left" Width="208" Height="26" VerticalAlignment="Bottom">Ask for a user account to launch it</CheckBox>
+                <Button x:Name="Button_SaveAssets" Foreground="White" ToolTip="Save the current assets (for this field) as a *.nsxml asset file" Margin="191,0,0,14" Height="37" Click="Button_SaveAssets_Click" HorizontalAlignment="Left" Width="161" VerticalAlignment="Bottom">
+                    <DockPanel>
+                        <material:PackIcon DockPanel.Dock="Left" HorizontalAlignment="Left" Kind="FileDocument" Height="30" Width="30"/>
+                        <Label DockPanel.Dock="Left" HorizontalAlignment="Left" Content="Save assets"/>
+                    </DockPanel>
+                </Button>
+                <Button x:Name="Button_LoadAssets" ToolTip="Import assets from a *.nsxml asset file (for this field)" Margin="22,0,0,14" Height="37" Click="Button_LoadAssets_Click" HorizontalAlignment="Left" Width="155" VerticalAlignment="Bottom">
+                    <DockPanel>
+                        <material:PackIcon DockPanel.Dock="Left" HorizontalAlignment="Left" Kind="Folder" Height="30" Width="30"/>
+                        <Label DockPanel.Dock="Left" HorizontalAlignment="Left" Content="Load assets"/>
+                    </DockPanel>
+                </Button>
+            </Grid>
+        </material:Card>
+        <material:Card Margin="0,0,10,10" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="492" Height="189">
+            <Grid>
+                <TextBox x:Name="Box_ImportantHTML" Foreground="White" IsEnabled="{Binding ElementName=Check_Important, Path=IsChecked}"  HorizontalAlignment="Left" Height="26" Margin="115,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" RenderTransformOrigin="0.467,0.522"/>
+                <Label Content="HTML documents" FontSize="14" HorizontalAlignment="Left" Margin="363,10,0,0" VerticalAlignment="Top"/>
+                <Label Content="LegalInfo NCA, Offline NCA" Foreground="Gray" FontSize="14" HorizontalAlignment="Left" Margin="13,10,0,0" VerticalAlignment="Top"/>
+                <Label Content="Important HTML" IsEnabled="{Binding ElementName=Check_Important, Path=IsChecked}" HorizontalAlignment="Left" Margin="13,50,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="Box_IPNoticesHTML" Foreground="White" IsEnabled="{Binding ElementName=Check_IPNotices, Path=IsChecked}" HorizontalAlignment="Left" Height="26" Margin="112,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="323" RenderTransformOrigin="0.467,0.522"/>
+                <Label Content="IPNotices HTML" IsEnabled="{Binding ElementName=Check_IPNotices, Path=IsChecked}" HorizontalAlignment="Left" Margin="13,76,0,0" VerticalAlignment="Top"/>
+                <Button x:Name="Button_ImportantHTMLBrowse" ToolTip="Browse important HTML directory (needs to have a index.html file)" IsEnabled="{Binding ElementName=Check_Important, Path=IsChecked}" Style="{DynamicResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left" Margin="449,50,0,0" VerticalAlignment="Top" Width="26" Height="26" Click="Button_ImportantHTMLBrowse_Click">
+                    <material:PackIcon Kind="Folder"/>
+                </Button>
+                <Button x:Name="Button_IPNoticesHTMLBrowse" ToolTip="Browse IP notices HTML directory (needs to have a index.html file)" IsEnabled="{Binding ElementName=Check_IPNotices, Path=IsChecked}" Style="{DynamicResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left" Margin="449,76,0,0" VerticalAlignment="Top" Width="26" Height="26" Click="Button_IPNoticesHTMLBrowse_Click">
+                    <material:PackIcon Kind="Folder"/>
+                </Button>
+                <TextBox x:Name="Box_SupportHTML" Foreground="White" IsEnabled="{Binding ElementName=Check_Support, Path=IsChecked}" HorizontalAlignment="Left" Height="26" Margin="102,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="333" RenderTransformOrigin="0.467,0.522"/>
+                <Label Content="Support HTML" IsEnabled="{Binding ElementName=Check_Support, Path=IsChecked}" HorizontalAlignment="Left" Margin="13,102,0,0" VerticalAlignment="Top"/>
+                <Button x:Name="Button_SupportHTMLBrowse" ToolTip="Browse support HTML directory (needs to have a index.html file)" IsEnabled="{Binding ElementName=Check_Support, Path=IsChecked}" Style="{DynamicResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left" Margin="449,102,0,0" VerticalAlignment="Top" Width="26" Height="26" Click="Button_SupportHTMLBrowse_Click">
+                    <material:PackIcon Kind="Folder"/>
+                </Button>
+                <TextBox x:Name="Box_OfflineHTML" Foreground="White" IsEnabled="{Binding ElementName=Check_Offline, Path=IsChecked}" HorizontalAlignment="Left" Height="26" Margin="98,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="337" RenderTransformOrigin="0.467,0.522"/>
+                <Label Content="Offline HTML" IsEnabled="{Binding ElementName=Check_Offline, Path=IsChecked}" HorizontalAlignment="Left" Margin="13,128,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.062,1"/>
+                <Button x:Name="Button_OfflineHTMLBrowse" ToolTip="Browse offline HTML directory (needs to have a index.html file)" IsEnabled="{Binding ElementName=Check_Offline, Path=IsChecked}" Style="{DynamicResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left" Margin="449,128,0,0" VerticalAlignment="Top" Width="26" Height="26" Click="Button_OfflineHTMLBrowse_Click">
+                    <material:PackIcon Kind="Folder"/>
+                </Button>
+            </Grid>
+        </material:Card>
+        <material:Card Margin="0,68,10,216" HorizontalAlignment="Right" Width="492" VerticalAlignment="Stretch">
+            <Grid>
+                <TextBox x:Name="Box_ExeFS" Foreground="White" HorizontalAlignment="Left" Height="26" Margin="105,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="332" RenderTransformOrigin="0.467,0.522"/>
+                <Label Content="Main title contents" FontSize="14" HorizontalAlignment="Left" Margin="356,10,0,0" VerticalAlignment="Top"/>
+                <Label Content="Program NCA" Foreground="Gray" FontSize="14" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <Label Content="ExeFS directory" HorizontalAlignment="Left" Margin="10,48,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="Box_RomFS" Foreground="White" HorizontalAlignment="Left" Height="26" Margin="112,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="325" RenderTransformOrigin="0.467,0.522"/>
+                <Label Content="RomFS directory" HorizontalAlignment="Left" Margin="10,74,0,0" VerticalAlignment="Top"/>
+                <Button x:Name="Button_ExeFSBrowse" ToolTip="Browse ExeFS directory (needs to have a main and main.npdm file)" Style="{DynamicResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left" Margin="444,48,0,0" VerticalAlignment="Top" Width="26" Height="26" Click="Button_ExeFSBrowse_Click">
+                    <material:PackIcon Kind="Folder"/>
+                </Button>
+                <Button x:Name="Button_RomFSBrowse" ToolTip="Browse RomFS directory (don't choose an empty folder)" Style="{DynamicResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left" Margin="444,74,0,0" VerticalAlignment="Top" Width="26" Height="26" Click="Button_RomFSBrowse_Click">
+                    <material:PackIcon Kind="Folder"/>
+                </Button>
+                <TextBox x:Name="Box_CustomLogo" Foreground="White" HorizontalAlignment="Left" Height="26" Margin="52,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="385" RenderTransformOrigin="0.467,0.522"/>
+                <Label Content="Logo" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top"/>
+                <Button x:Name="Button_CustomLogoBrowse" ToolTip="Browse custom logo (needs to have just a PNG and a GIF, otherwise Nintendo's one will be used)" Style="{DynamicResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left" Margin="444,100,0,0" VerticalAlignment="Top" Width="26" Height="26" Click="Button_CustomLogoBrowse_Click">
+                    <material:PackIcon Kind="Folder"/>
+                </Button>
+            </Grid>
+        </material:Card>
+        <Button x:Name="Button_BuildNSP" ToolTip="Build NSP package with the specified assets and content" Margin="10,0,520,10" Height="38" Click="Button_BuildNSP_Click" VerticalAlignment="Bottom">
+            <DockPanel>
+                <material:PackIcon DockPanel.Dock="Left" HorizontalAlignment="Left" Kind="Buffer" Height="30" Width="30"/>
+                <Label DockPanel.Dock="Left" HorizontalAlignment="Left" FontSize="15">Build NSP package!</Label>
+            </DockPanel>
+        </Button>
+    </Grid>
+    <Page.Resources>
+        <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseDark.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Dark.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.PopupBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.CheckBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.DeepPurple.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+</Page>

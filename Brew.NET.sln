@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSPack", "NSPack\NSPack.csproj", "{7D4E415D-C34A-421E-8F7C-B113E5503834}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HacPack", "HacPack\HacPack.csproj", "{6B22A7CB-2F37-41EB-BC42-09E8E0BED121}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brew.NET", "Brew.NET\Brew.NET.csproj", "{6B22A7CB-2F37-41EB-BC42-09E8E0BED121}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

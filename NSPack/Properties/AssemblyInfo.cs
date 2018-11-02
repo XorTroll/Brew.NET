@@ -7,13 +7,13 @@ using System.Windows;
 // La información general de un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada con un ensamblado.
-[assembly: AssemblyTitle("NSPack - NSP builder (GUI of hacPack)")]
-[assembly: AssemblyDescription("NSPack - NSP builder (GUI of hacPack)")]
+[assembly: AssemblyTitle("NSPack tool: simple NSP package builder")]
+[assembly: AssemblyDescription("NSPack tool: simple NSP package builder")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("By XorTroll - hacPack by The-4n")]
-[assembly: AssemblyProduct("NSPack")]
-[assembly: AssemblyCopyright("Copyright © 2018 by XorTroll - hacPack by The-4n")]
-[assembly: AssemblyTrademark("By XorTroll - hacPack by The-4n")]
+[assembly: AssemblyCompany("By XorTroll")]
+[assembly: AssemblyProduct("Brew.NET")]
+[assembly: AssemblyCopyright("Copyright © 2018 by XorTroll")]
+[assembly: AssemblyTrademark("By XorTroll")]
 [assembly: AssemblyCulture("")]
 
 // Si establece ComVisible en false, los tipos de este ensamblado no estarán visibles 
@@ -51,7 +51,7 @@ using System.Windows;
 // Puede especificar todos los valores o utilizar los números de compilación y de revisión predeterminados
 // mediante el carácter '*', como se muestra a continuación:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.1.1.0")]
-[assembly: AssemblyFileVersion("0.1.1.0")]
+[assembly: AssemblyVersion("0.2.0.0")]
+[assembly: AssemblyFileVersion("0.2.0.0")]
 [assembly: NeutralResourcesLanguage("en")]
 

@@ -10,19 +10,17 @@
       Title="Start">
 
     <Grid>
-        <Label FontSize="25" HorizontalAlignment="Left" Margin="25,88,0,0" VerticalAlignment="Top">Welcome to NSPack builder</Label>
-        <Label FontSize="15" Foreground="#333333" HorizontalAlignment="Left" Margin="345,99,0,0" VerticalAlignment="Top">version 0.1.1 (beta bugfix)</Label>
-        <Label FontSize="15" HorizontalAlignment="Left" Margin="38,136,0,0" VerticalAlignment="Top">This tool is a very improved version of NSPBuilder and Nintendo Web Framework (some illegal NSP builders, but this one is 100% legal),</Label>
-        <Label FontSize="15" HorizontalAlignment="Left" Margin="38,166,0,0" VerticalAlignment="Top">This one, appart from being legal, has new and fixed stuff, providing this GUI for easy NSP building.</Label>
-
-        <Label FontSize="15" HorizontalAlignment="Left" Margin="37,197,0,0" VerticalAlignment="Top">Here, you can easily make your own NSP packages, configuring ExeFS, RomFS, custom logo, HTML partitions...</Label>
-        <Label FontSize="20" HorizontalAlignment="Left" Margin="25,272,0,0" VerticalAlignment="Top">About this program</Label>
-        <Label FontSize="15" HorizontalAlignment="Left" Margin="38,314,0,0" VerticalAlignment="Top">This program is just a nice and easy-to-use GUI using The-4n's hacPack CLI tool. He is the one who made legal NSPs possible.</Label>
-        <Label FontSize="15" HorizontalAlignment="Left" Margin="37,344,0,0" VerticalAlignment="Top">(I made NSP builders using the NintendoSDK tools, but this one is 100% legal!)</Label>
-        <Button x:Name="Button_Start" ToolTip="Start building NSP packages!" Margin="306,0,307,39" Height="53" Click="Button_Start_Click" VerticalAlignment="Bottom">
+        <Image Source="pack://application:,,,/NSPack;component/Resources/StartInfo.png"></Image>
+        <Button x:Name="Button_StartNSP" ToolTip="Start building NSP packages" Margin="179,0,0,25" Height="37" Click="Button_StartNSP_Click" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="373">
             <DockPanel>
                 <material:PackIcon DockPanel.Dock="Left" HorizontalAlignment="Left" Kind="Buffer" Height="30" Width="30"/>
-                <Label DockPanel.Dock="Left" HorizontalAlignment="Left" FontSize="15" Foreground="White">Start building NSP packages!</Label>
+                <Label DockPanel.Dock="Left" HorizontalAlignment="Left" FontSize="15" Foreground="White">Build NSP packages</Label>
+            </DockPanel>
+        </Button>
+        <Button x:Name="Button_StartNCA" ToolTip="Start building NCA contents" Margin="0,0,193,25" Height="37" Click="Button_StartNCA_Click" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="378">
+            <DockPanel>
+                <material:PackIcon DockPanel.Dock="Left" HorizontalAlignment="Left" Kind="Buffer" Height="30" Width="30"/>
+                <Label DockPanel.Dock="Left" HorizontalAlignment="Left" FontSize="15" Foreground="White">Build NCA contents</Label>
             </DockPanel>
         </Button>
     </Grid>
@@ -34,11 +32,11 @@
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml"></ResourceDictionary>
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Dark.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.PopupBox.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.LightBlue.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.LightBlue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.DeepPurple.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Page.Resources>

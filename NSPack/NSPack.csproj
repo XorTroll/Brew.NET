@@ -49,8 +49,8 @@
     <Reference Include="MaterialDesignColors, Version=1.0.0.14576, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignColors.1.1.1\lib\net45\MaterialDesignColors.dll</HintPath>
     </Reference>
-    <Reference Include="MaterialDesignThemes.Wpf, Version=2.5.0.1169, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MaterialDesignThemes.2.5.0-ci1169\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.5.0.1205, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.2.5.0.1205\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
@@ -80,8 +80,11 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="GUI\AssetEditor.xaml.cs">
-      <DependentUpon>AssetEditor.xaml</DependentUpon>
+    <Compile Include="GUI\ContentCreator.xaml.cs">
+      <DependentUpon>ContentCreator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TitlePackager.xaml.cs">
+      <DependentUpon>TitlePackager.xaml</DependentUpon>
     </Compile>
     <Compile Include="GUI\Resources.cs" />
     <Compile Include="GUI\Start.xaml.cs">
@@ -124,7 +127,11 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="GUI\AssetEditor.xaml">
+    <Page Include="GUI\ContentCreator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\TitlePackager.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -138,15 +145,17 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\StartInfo.png" />
+    <Resource Include="Resources\Background.png" />
     <Content Include="Resources\SampleLogo.bmp" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HacPack\HacPack.csproj">
+    <ProjectReference Include="..\Brew.NET\Brew.NET.csproj">
       <Project>{6b22a7cb-2f37-41eb-bc42-09e8e0bed121}</Project>
-      <Name>HacPack</Name>
+      <Name>Brew.NET</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

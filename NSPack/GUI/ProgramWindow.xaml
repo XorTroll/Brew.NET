@@ -7,17 +7,21 @@
         xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns:material="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="NSPack builder" BorderThickness="0" MinHeight="600" FontFamily="Segoe UI" MinWidth="1200" Background="#99ccff" WindowTitleBrush="#000033">
+        Title="NSPack builder" BorderThickness="0" MinHeight="600" FontFamily="Segoe UI" MinWidth="1200" WindowTitleBrush="#000033">
     <Grid>
-        <ListBox x:Name="OptionToggle" Background="White" Style="{DynamicResource MaterialDesignToolToggleListBox}" Margin="10,10,10,530" SelectedIndex="0" SelectionChanged="OptionToggle_SelectionChanged">
-            <ListBoxItem>Welcome</ListBoxItem>
-            <ListBoxItem>Assets and building</ListBoxItem>
+        <ListBox x:Name="OptionToggle" Style="{DynamicResource MaterialDesignToolToggleListBox}" Margin="10,10,10,530" SelectedIndex="0" SelectionChanged="OptionToggle_SelectionChanged">
+            <ListBoxItem>Welcome page</ListBoxItem>
+            <ListBoxItem>Build NSP packages</ListBoxItem>
+            <ListBoxItem>Build NCA contents</ListBoxItem>
         </ListBox>
         <Frame x:Name="PageHolder" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" NavigationUIVisibility="Hidden" Margin="10,50,10,45" Source="Start.xaml"/>
     </Grid>
+    <metro:MetroWindow.Background>
+        <ImageBrush ImageSource="pack://application:,,,/NSPack;component/Resources/Background.png"></ImageBrush>
+    </metro:MetroWindow.Background>
     <metro:MetroWindow.TitleTemplate>
         <DataTemplate>
-            <TextBlock Text="{Binding Title,RelativeSource={RelativeSource FindAncestor,AncestorType=Window}}" VerticalAlignment="Center" FontFamily="Segoe UI" Foreground="LightGray" Margin="8 -1 0 0"/>
+            <TextBlock Text="{Binding Title,RelativeSource={RelativeSource FindAncestor,AncestorType=Window}}" VerticalAlignment="Center" FontFamily="Segoe UI" Foreground="White" Margin="8 -1 0 0"/>
         </DataTemplate>
     </metro:MetroWindow.TitleTemplate>
     <metro:MetroWindow.Resources>
@@ -27,12 +31,12 @@
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Orange.xaml"></ResourceDictionary>
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml"></ResourceDictionary>
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseDark.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Dark.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.PopupBox.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.LightBlue.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.LightBlue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.DeepPurple.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </metro:MetroWindow.Resources>

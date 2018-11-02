@@ -16,8 +16,7 @@ namespace Brew.NSPack.GUI
 
     public static class Resources
     {
-        public static string Program = "NSPack builder";
-        public static Version ProgramVersion = new Version("0.1.1.0");
+        public static string Program = "NSPack tool";
         public static NSP CurrentApp = null;
 
         public static void log(string Text, LogType Type = LogType.Error)
@@ -50,7 +49,7 @@ namespace Brew.NSPack.GUI
             main.Title = Program + " → " + Title;
         }
 
-        public static void resetTitle() => setTitle("Ready to build NSPs!");
+        public static void resetTitle() => setTitle("Ready to build NSP packages!");
 
         public static void actionAsync(string Description, Action Action)
         {
