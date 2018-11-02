@@ -10,7 +10,7 @@ Credits to:
 - The-4n for his awesome work with custom NCA and NSP building
 - Liam for helping me with NACP support
 
-## https://github.com/XorTroll/Brew.NET/blob/master/README.md
+## NSPack - simple NSP package and NCA content builder
 
 ### Using the builder
 
