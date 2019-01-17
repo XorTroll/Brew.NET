@@ -251,8 +251,9 @@ namespace Brew.NSPack.GUI
             else if(kgen is "3 (3.0.1 - 3.0.2)") keygen = 3;
             else if(kgen is "4 (4.0.0 - 4.1.0)") keygen = 4;
             else if(kgen is "5 (5.0.0 - 5.1.0)") keygen = 5;
-            else if(kgen is "6 (6.0.0 - Latest)") keygen = 6;
-            if(string.IsNullOrEmpty(Box_Name.Text))
+            else if(kgen is "6 (6.0.0 - 6.1.0)") keygen = 6;
+            else if(kgen is "7 (6.2.0 - Latest)") keygen = 7;
+            if (string.IsNullOrEmpty(Box_Name.Text))
             {
                 GUI.Resources.log("No application name was set.");
                 return;
@@ -486,8 +487,9 @@ namespace Brew.NSPack.GUI
             else if(kgen is "3 (3.0.1 - 3.0.2)") keygen = 3;
             else if(kgen is "4 (4.0.0 - 4.1.0)") keygen = 4;
             else if(kgen is "5 (5.0.0 - 5.1.0)") keygen = 5;
-            else if(kgen is "6 (6.0.0 - Latest)") keygen = 6;
-            if(string.IsNullOrEmpty(Box_Name.Text))
+            else if(kgen is "6 (6.0.0 - 6.1.0)") keygen = 6;
+            else if(kgen is "7 (6.2.0 - Latest)") keygen = 7;
+            if (string.IsNullOrEmpty(Box_Name.Text))
             {
                 GUI.Resources.log("No application name was set.");
                 return;
