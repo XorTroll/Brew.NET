@@ -101,9 +101,7 @@ namespace Brew.HacPack
                     hacpack += " --ncatype program";
                     hacpack += " --exefsdir \"\"" + ExeFS + "\"\"";
                     if(!string.IsNullOrEmpty(RomFS)) hacpack += " --romfsdir \"\"" + RomFS + "\"\"";
-                    else hacpack += "";
                     if(!string.IsNullOrEmpty(Logo)) hacpack += " --logodir \"\"" + Logo + "\"\"";
-                    else hacpack += "";
                     break;
             }
             try
