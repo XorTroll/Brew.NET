@@ -200,7 +200,8 @@ namespace Brew.NSPack.GUI
             else if(kgen is "3 (3.0.1 - 3.0.2)") keygen = 3;
             else if(kgen is "4 (4.0.0 - 4.1.0)") keygen = 4;
             else if(kgen is "5 (5.0.0 - 5.1.0)") keygen = 5;
-            else if(kgen is "6 (6.0.0 - Latest)") keygen = 6;
+            else if(kgen is "6 (6.0.0 - 6.2.0)") keygen = 6;
+            else if (kgen is "7 (6.2.0 - Latest)") keygen = 7;
             string ccwd = Utils.Cwd;
             string exefs = null;
             string romfs = null;
@@ -319,7 +320,8 @@ namespace Brew.NSPack.GUI
             else if(kgen is "3 (3.0.1 - 3.0.2)") keygen = 3;
             else if(kgen is "4 (4.0.0 - 4.1.0)") keygen = 4;
             else if(kgen is "5 (5.0.0 - 5.1.0)") keygen = 5;
-            else if(kgen is "6 (6.0.0 - Latest)") keygen = 6;
+            else if(kgen is "6 (6.0.0 - 6.1.0)") keygen = 6;
+            else if (kgen is "7 (6.2.0 - Latest)") keygen = 7;
             string ccwd = Utils.Cwd;
             if(string.IsNullOrEmpty(Box_KeySet.Text))
             {
@@ -437,7 +439,8 @@ namespace Brew.NSPack.GUI
             else if (kgen is "3 (3.0.1 - 3.0.2)") keygen = 3;
             else if (kgen is "4 (4.0.0 - 4.1.0)") keygen = 4;
             else if (kgen is "5 (5.0.0 - 5.1.0)") keygen = 5;
-            else if (kgen is "6 (6.0.0 - Latest)") keygen = 6;
+            else if (kgen is "6 (6.0.0 - 6.1.0)") keygen = 6;
+            else if (kgen is "7 (6.2.0 - Latest)") keygen = 7;
             string ccwd = Utils.Cwd;
             string imp = Box_ImportantHTML.Text;
             string ipn = Box_IPNoticesHTML.Text;
@@ -581,7 +584,8 @@ namespace Brew.NSPack.GUI
             else if (kgen is "3 (3.0.1 - 3.0.2)") keygen = 3;
             else if (kgen is "4 (4.0.0 - 4.1.0)") keygen = 4;
             else if (kgen is "5 (5.0.0 - 5.1.0)") keygen = 5;
-            else if (kgen is "6 (6.0.0 - Latest)") keygen = 6;
+            else if (kgen is "6 (6.0.0 - 6.1.0)") keygen = 6;
+            else if (kgen is "7 (6.2.0 - Latest)") keygen = 7;
             string ccwd = Utils.Cwd;
             string off = Box_OfflineHTML.Text;
             if(string.IsNullOrEmpty(off))

@@ -30,13 +30,14 @@
                     <material:PackIcon Kind="Folder"/>
                 </Button>
                 <Label Content="Key generation" HorizontalAlignment="Left" Margin="19,77,0,0" VerticalAlignment="Top" Height="26" Width="90"/>
-                <ComboBox x:Name="Combo_KeyGen" Foreground="White" HorizontalAlignment="Left" SelectedIndex="5" Margin="125,77,0,0" VerticalAlignment="Top" Width="127" Height="26">
+                <ComboBox x:Name="Combo_KeyGen" Foreground="White" HorizontalAlignment="Left" SelectedIndex="6" Margin="125,77,0,0" VerticalAlignment="Top" Width="127" Height="26">
                     <ComboBoxItem Content="1 (1.0.0 - 2.3.0)"/>
                     <ComboBoxItem Content="2 (3.0.0)"/>
                     <ComboBoxItem Content="3 (3.0.1 - 3.0.2)"/>
                     <ComboBoxItem Content="4 (4.0.0 - 4.1.0)"/>
                     <ComboBoxItem Content="5 (5.0.0 - 5.1.0)"/>
-                    <ComboBoxItem Content="6 (6.0.0 - Latest)"/>
+                    <ComboBoxItem Content="6 (6.0.0 - 6.1.0)"/>
+                    <ComboBoxItem Content="7 (6.2.0 - Latest)"/>
                 </ComboBox>
                 <TextBox x:Name="Box_ProductCode" Foreground="White" HorizontalAlignment="Left" MaxLength="16" Height="26" Margin="143,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144">LA-H-ABCDE</TextBox>
                 <Label Content="Product code / serial" HorizontalAlignment="Left" Margin="19,180,0,0" VerticalAlignment="Top" Height="26" Width="119"/>
