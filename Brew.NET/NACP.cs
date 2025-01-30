@@ -57,9 +57,9 @@ namespace Brew
             {
                 long titleoff = (i * 0x300);
                 r.BaseStream.Seek(titleoff, SeekOrigin.Begin);
-                string name = Encoding.ASCII.GetString(r.ReadBytes(0x200));
+                string name = Encoding.UTF8.GetString(r.ReadBytes(0x200));
                 r.BaseStream.Seek(titleoff + 0x200, SeekOrigin.Begin);
-                string author = Encoding.ASCII.GetString(r.ReadBytes(0x100));
+                string author = Encoding.UTF8.GetString(r.ReadBytes(0x100));
                 Entries.Add(new NACPEntry()
                 {
                     Name = name,
@@ -87,14 +87,14 @@ namespace Brew
             int psize = pcode.Count;
             foreach(NACPEntry ent in Entries)
             {
-                List<byte> name = new List<byte>(Encoding.ASCII.GetBytes(ent.Name));
+                List<byte> name = new List<byte>(Encoding.UTF8.GetBytes(ent.Name));
                 int size = name.Count;
                 while(size < 0x200)
                 {
                     name.Add(0);
                     size = name.Count;
                 }
-                List<byte> author = new List<byte>(Encoding.ASCII.GetBytes(ent.Author));
+                List<byte> author = new List<byte>(Encoding.UTF8.GetBytes(ent.Author));
                 size = author.Count;
                 while(size < 0x100)
                 {
