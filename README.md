@@ -5,6 +5,8 @@ This project contains:
 - Brew.NET, a C# library using hacPack tool (credits to The-4n, great work!) to build NSP packages (yeah, the project and one of the projects inside it have the same name)
 - NSPack, a GUI front-end for the libraries mentioned above, to easily build NSP packages
 
+## **IMPORTANT!** this project is no longer continued.
+
 Credits to:
 
 - The-4n for his awesome work with custom NCA and NSP building
